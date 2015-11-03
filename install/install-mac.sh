@@ -2,7 +2,7 @@
 
 ### How to install mercurial from source on mac os
 
-MERCURIAL_VERSION="3.5.2"
+MERCURIAL_VERSION="3.6"
 DIST_FILE="mercurial-$MERCURIAL_VERSION.tar.gz"
 DESTINATION_FOLDER="$HOME/Development/bin"
 DISTR_URL="http://mercurial.selenic.com/release/$DIST_FILE"
