@@ -6,6 +6,7 @@ Some usefull extensions are enabled.
 username = your name <your email>
 
 [extensions]
+color=
 rebase=
 purge=
 shelve=
