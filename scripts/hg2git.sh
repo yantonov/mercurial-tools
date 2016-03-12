@@ -9,17 +9,17 @@ function get_working_directory_path() {
 }
 
 function create_directory() {
-	path=$1
-	echo "creating directory \"$path\""
-        echo "mkdir $path"
-	mkdir $path
+    path=$1
+    echo "creating directory \"$path\""
+    echo "mkdir $path"
+    mkdir $path
 }
 
 function remove_directory() {
-	path=$1
-	echo "removing directory \"$path\""
-	echo "rm -rf $path"
-	rm -rf $path
+    path=$1
+    echo "removing directory \"$path\""
+    echo "rm -rf $path"
+    rm -rf $path
 }
 
 WD=`pwd`
@@ -32,7 +32,7 @@ else
     NEW_REPO_NAME=$3
 
     if [ ! -d $WHERE_TO_PLACE_NEW_REPO]; then
-	echo "Destination dir : $WHERE_TO_PLACE_NEW_REPO does not exists."
+        echo "Destination dir : $WHERE_TO_PLACE_NEW_REPO does not exists."
     fi
 
     # create tmp dir
@@ -59,6 +59,6 @@ else
     git clone $NEW_REPO_PATH
 
     # cleanup
-    remove_directory $workingDirectory
+    #remove_directory $workingDirectory
 fi
 cd $WD
