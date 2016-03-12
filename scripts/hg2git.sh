@@ -23,16 +23,23 @@ function remove_directory() {
 }
 
 WD=`pwd`
-if [ $# -lt 3 ]; then
-    echo "Usage: hg_repo where_to_place_new_repo new_repo_name"
+if [ $# -lt 2 ]; then
+    echo "Usage: hg_repo git_repo"
+    echo "--------"
+    echo "hg2git ~/Desktop/hg-repo ~/Desktop/git-repo"
     exit 0
 else
     HG_REPO=$1
-    WHERE_TO_PLACE_NEW_REPO=$2
-    NEW_REPO_NAME=$3
+    GIT_REPO=$2
+    WHERE_TO_PLACE_NEW_REPO=$(cd `dirname $GIT_REPO` && pwd)
+    NEW_REPO_NAME=`basename $GIT_REPO`
+
+    echo "*** $WHERE_TO_PLACE_NEW_REPO ***"
+    echo "*** $NEW_REPO_NAME ***"
 
     if [ ! -d $WHERE_TO_PLACE_NEW_REPO]; then
         echo "Destination dir : $WHERE_TO_PLACE_NEW_REPO does not exists."
+        exit 0;
     fi
 
     # create tmp dir
@@ -57,6 +64,8 @@ else
     # place new repo to dest
     cd $WHERE_TO_PLACE_NEW_REPO
     git clone $NEW_REPO_PATH
+
+    echo "NEW_REPO=" $NEW_REPO_PATH
 
     # cleanup
     remove_directory $workingDirectory
