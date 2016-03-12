@@ -64,6 +64,7 @@ else
     # place new repo to dest
     cd $WHERE_TO_PLACE_NEW_REPO
     git clone $NEW_REPO_PATH
+    git remote rm origin
 
     echo "NEW_REPO=" $NEW_REPO_PATH
 
