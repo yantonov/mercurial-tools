@@ -59,6 +59,6 @@ else
     git clone $NEW_REPO_PATH
 
     # cleanup
-    #remove_directory $workingDirectory
+    remove_directory $workingDirectory
 fi
 cd $WD
