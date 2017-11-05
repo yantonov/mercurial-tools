@@ -2,10 +2,15 @@
 
 ### How to install mercurial from source on mac os
 
-MERCURIAL_VERSION="3.7.2"
+MERCURIAL_VERSION=`curl -s -L 'https://www.mercurial-scm.org/release/' | grep -E 'mercurial-[0-9]+\.[0-9]+\.tar.gz' | uniq | sort | tail -n 1 | sed -E 's/.*([0-9]+\.[0-9]+).*/\1/' | head -n 1 || echo ''`
+if [ -z "$MERCURIAL_VERSION" ]; then
+    echo "cant detect mercurial latest version"
+    exit -1
+fi
+echo "ready to install mercurial $MERCURIAL_VERSION ..."
 DIST_FILE="mercurial-$MERCURIAL_VERSION.tar.gz"
 DESTINATION_FOLDER="$HOME/Development/bin"
-DISTR_URL="http://mercurial.selenic.com/release/$DIST_FILE"
+DISTR_URL="https://mercurial-scm.org/release/$DIST_FILE"
 EXTRACTED_MERCURIAL_DIR=mercurial-$MERCURIAL_VERSION
 
 WD=`pwd`
