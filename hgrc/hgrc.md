@@ -11,4 +11,6 @@ rebase=
 purge=
 shelve=
 strip=
+
+%include ~/.hgrc_aliases
 ```

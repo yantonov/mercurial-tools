@@ -1,0 +1,4 @@
+[alias]
+ps=push
+pl=pull
+pr=pull --rebase
