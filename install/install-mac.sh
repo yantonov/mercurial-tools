@@ -7,7 +7,11 @@ if [ -z "$MERCURIAL_VERSION" ]; then
     echo "cant detect mercurial latest version"
     exit -1
 fi
+
 echo "ready to install mercurial $MERCURIAL_VERSION ..."
+
+echo " !!! Be carefull. This works with python 2, at least now (2017-11)"
+
 DIST_FILE="mercurial-$MERCURIAL_VERSION.tar.gz"
 DESTINATION_FOLDER="$HOME/Development/bin"
 DISTR_URL="https://mercurial-scm.org/release/$DIST_FILE"
