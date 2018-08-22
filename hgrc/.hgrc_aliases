@@ -5,3 +5,4 @@ br=branch
 lc=log -l 1 -p
 cm=commit -m
 close=commit -m 'close' --close-branch
+log=log -b .
