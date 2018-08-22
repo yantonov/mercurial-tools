@@ -1,3 +1,4 @@
 [alias]
 ps=push -b . --new-branch
 pl=pull
+br=branch
