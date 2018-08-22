@@ -2,3 +2,4 @@
 ps=push -b . --new-branch
 pl=pull
 br=branch
+lc=log -l 1 -p
