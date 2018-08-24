@@ -6,3 +6,4 @@ lc=log -b . -l 1 -p
 cm=commit -m
 close=commit -m 'close' --close-branch
 lb=log -b .
+df=diff
