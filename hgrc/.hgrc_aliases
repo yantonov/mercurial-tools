@@ -1,5 +1,6 @@
 [alias]
 ps=push -b . --new-branch
+pu=pull -u
 pl=pull
 br=branch
 lc=log -b . -l 1 -p
