@@ -1,7 +1,7 @@
 import re
 
 def try_extract_ticket_number(branch):
-    branch_regexp = re.compile(r'.*/([A-Za-z0-9]+-[0-9]+)[^/]*$')
+    branch_regexp = re.compile(r'.*/([A-Z]+-[0-9]+)[^/]*$')
     m = branch_regexp.match(branch)
     if m:
         return m.group(1)
