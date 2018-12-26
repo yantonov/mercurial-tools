@@ -3,6 +3,7 @@ ps=push -b . --new-branch
 pu=pull -u
 pl=pull
 br=branch
+upc=update --clean
 lc=log -b . -l 1
 lcp=log -b . -l 1
 cm=commit -m
