@@ -17,7 +17,7 @@ def precommit_hook(repo, **kwargs):
 
         branch = ctx.branch();
         ticket_number = try_extract_ticket_number(branch)
-        if ticket_number != None:
+        if ticket_number != None and not ctx._text.startswith(ticket_number):
             ctx._text = "".join([ticket_number, ": ", ctx._text])
         return commitctx(ctx, error)
 
